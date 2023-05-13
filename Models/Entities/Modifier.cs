@@ -6,20 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace DataAccessLayer.Model.Entities
+namespace ShareBucket.DataAccessLayer.Models.Entities
 {
     [Index(nameof(Id), IsUnique = true)]
-    public class Tier
+    public class Modifier
     {
         public int Id { get; set; }
-        [MaxLength(50), Required]
+        [Required]
         public string Name { get; set; }
-        [Required]
-        public int MaxGB { get; set; }
-        [Required]
-        public int MaxAreaNumber { get; set; }
-        [Required]
-        public decimal Price { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public decimal Percentage { get; set; }
     }
 }

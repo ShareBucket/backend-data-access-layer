@@ -1,4 +1,4 @@
-﻿using DataAccessLayer.Models.Entities;
+﻿using ShareBucket.DataAccessLayer.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Model.Entities
+namespace ShareBucket.DataAccessLayer.Models.Entities
 {
     [Index(nameof(Id), IsUnique = true)]
     internal class Change

@@ -6,16 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Model.Entities
+namespace ShareBucket.DataAccessLayer.Models.Entities
 {
     [Index(nameof(Id), IsUnique = true)]
-    public class Modifier
+    public class Metadata
     {
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public decimal Percentage { get; set; }
+        public int Path { get; set; }
+        [Required]
+        public string Filename { get; set; }
+        [Required]
+        public string FileExtension { get; set; }
+        public DateTime DataCreation { get; set; }
     }
 }

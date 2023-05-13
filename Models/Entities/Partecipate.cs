@@ -1,6 +1,6 @@
-﻿using DataAccessLayer.Models.Entities;
+﻿using ShareBucket.DataAccessLayer.Models.Entities;
 
-namespace DataAccessLayer.Model.Entities
+namespace ShareBucket.DataAccessLayer.Models.Entities
 {
     public class Partecipate
     {

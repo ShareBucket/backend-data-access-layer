@@ -1,10 +1,10 @@
-﻿using DataAccessLayer.Model.Entities;
+﻿using ShareBucket.DataAccessLayer.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-    namespace DataAccessLayer.Models.Entities
-    {
+    namespace ShareBucket.DataAccessLayer.Models.Entities
+{
         [Index(nameof(Id), nameof(Email), IsUnique = true)]
         public class User
         {

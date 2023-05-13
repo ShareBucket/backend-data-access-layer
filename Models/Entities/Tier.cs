@@ -6,19 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Model.Entities
+
+namespace ShareBucket.DataAccessLayer.Models.Entities
 {
     [Index(nameof(Id), IsUnique = true)]
-    public class Metadata
+    public class Tier
     {
         public int Id { get; set; }
+        [MaxLength(50), Required]
+        public string Name { get; set; }
         [Required]
-        public int Path { get; set; }
+        public int MaxGB { get; set; }
         [Required]
-        public string Filename { get; set; }
+        public int MaxAreaNumber { get; set; }
         [Required]
-        public string FileExtension { get; set; }
-        public DateTime DataCreation { get; set; }
-
+        public decimal Price { get; set; }
     }
 }
