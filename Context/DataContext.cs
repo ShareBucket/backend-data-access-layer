@@ -8,19 +8,19 @@ namespace ShareBucket.DataAccessLayer.Data
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) {
-            //try
-            //{
-            //    var databaseCreator = Database.GetService<IRelationalDatabaseCreator>() as RelationalDatabaseCreator;
-            //    if (databaseCreator != null)
-            //    {
-            //        if (!databaseCreator.CanConnect()) databaseCreator.Create();
-            //        if (!databaseCreator.HasTables()) databaseCreator.CreateTables();
-            //    }
-            //}
-            //catch (System.Exception ex)
-            //{
-            //    System.Console.WriteLine(ex.Message);
-            //}
+            try
+            {
+                var databaseCreator = Database.GetService<IRelationalDatabaseCreator>() as RelationalDatabaseCreator;
+                if (databaseCreator != null)
+                {
+                    if (!databaseCreator.CanConnect()) databaseCreator.Create();
+                    if (!databaseCreator.HasTables()) databaseCreator.CreateTables();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                System.Console.WriteLine(ex.Message);
+            }
         }
 
         public DbSet<User> Users { get; set; }
